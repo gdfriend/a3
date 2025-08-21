@@ -1,44 +1,4 @@
-<head>
-	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-	<title>ASP 测验</title>
-	<script src="./jquery.min.js"></script>
-</head>
-<div class="article-body">		
-	<div class="article-intro" id="content">			
-			<h1>ASP 测验</h1>
-<script src="./runoob-quiz.js"></script>
-<!-- 主要内容区域 -->
-<div class="runoob-quiz-container">
-    <div class="runoob-quiz-card">
-        <div class="runoob-quiz-progress-bar" style="width: 0%"></div>
-        
-        <div class="runoob-quiz-content">
-            <div id="quiz-container">
-                <!-- 测验内容将在这里加载 -->
-            </div>
-            
-            <div id="result-container" class="runoob-quiz-hidden runoob-quiz-result-container">
-                <div id="score-display" class="runoob-quiz-score-display">0/0</div>
-                <p id="result-message" class="runoob-quiz-result-message"></p>
-                <button id="restart-btn" class="runoob-quiz-btn runoob-quiz-btn-primary">
-                    <i class="fa fa-repeat"></i> 重新開始
-                </button>
-            </div>
-            
-            <div class="runoob-quiz-button-container">
-                <button id="prev-btn" class="runoob-quiz-btn runoob-quiz-btn-secondary runoob-quiz-hidden">
-                    <i class="fa fa-arrow-left"></i> 上一题
-                </button>
-                <button id="next-btn" class="runoob-quiz-btn runoob-quiz-btn-primary">
-                    下一题 <i class="fa fa-arrow-right"></i>
-                </button>
-            </div>
-        </div>
-    </div>
-</div>
-<script>
-  // ASP 基础测验 20 题
-  const quizData = {
+﻿{
     title: "ASP 基础测验",
     description: "测试你对 ASP 基础知识的了解",
     questions: [
@@ -163,19 +123,4 @@
         incorrectResponse: "回答错误，正确答案是 Recordset。"
       }
     ]
-  };
-
-  // 启动测验
-  $(document).ready(function () {
-      $('#quiz-container').runoobQuiz({
-          data: quizData,
-          onFinish: function (score, total) {
-              console.log("测验完成！得分：" + score + "/" + total);
-          }
-      });
-  });
-</script>	
-						
-			</div>
-			
-		</div>
+  }
