@@ -1,0 +1,181 @@
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<title>ASP 测验</title>
+	<script src="./jquery.min.js"></script>
+</head>
+<div class="article-body">		
+	<div class="article-intro" id="content">			
+			<h1>ASP 测验</h1>
+<script src="./runoob-quiz.js"></script>
+<!-- 主要内容区域 -->
+<div class="runoob-quiz-container">
+    <div class="runoob-quiz-card">
+        <div class="runoob-quiz-progress-bar" style="width: 0%"></div>
+        
+        <div class="runoob-quiz-content">
+            <div id="quiz-container">
+                <!-- 测验内容将在这里加载 -->
+            </div>
+            
+            <div id="result-container" class="runoob-quiz-hidden runoob-quiz-result-container">
+                <div id="score-display" class="runoob-quiz-score-display">0/0</div>
+                <p id="result-message" class="runoob-quiz-result-message"></p>
+                <button id="restart-btn" class="runoob-quiz-btn runoob-quiz-btn-primary">
+                    <i class="fa fa-repeat"></i> 重新開始
+                </button>
+            </div>
+            
+            <div class="runoob-quiz-button-container">
+                <button id="prev-btn" class="runoob-quiz-btn runoob-quiz-btn-secondary runoob-quiz-hidden">
+                    <i class="fa fa-arrow-left"></i> 上一题
+                </button>
+                <button id="next-btn" class="runoob-quiz-btn runoob-quiz-btn-primary">
+                    下一题 <i class="fa fa-arrow-right"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+  // ASP 基础测验 20 题
+  const quizData = {
+    title: "ASP 基础测验",
+    description: "测试你对 ASP 基础知识的了解",
+    questions: [
+      {
+        q: "ASP 的全称是什么？",
+        options: [
+          "Active Server Pages",
+          "Advanced Server Pages",
+          "Application Service Provider",
+          "Active Service Pages"
+        ],
+        correctIndex: 0,
+        correctResponse: "回答正确。",
+        incorrectResponse: "回答错误，正确答案是 Active Server Pages。"
+      },
+      {
+        q: "ASP 文件的默认扩展名是？",
+        options: [
+          ".asp",
+          ".aspx",
+          ".php",
+          ".html"
+        ],
+        correctIndex: 0,
+        correctResponse: "回答正确。",
+        incorrectResponse: "回答错误，正确答案是 .asp。"
+      },
+      {
+        q: "ASP 主要运行在哪种服务器上？",
+        options: [
+          "IIS",
+          "Apache",
+          "Nginx",
+          "Tomcat"
+        ],
+        correctIndex: 0,
+        correctResponse: "回答正确。",
+        incorrectResponse: "回答错误，ASP 主要运行在 IIS 上。"
+      },
+      {
+        q: "ASP 代码块的起始和结束标记是？",
+        options: [
+          "&lt;% 和 %&gt;",
+          "&lt;?php 和 ?&gt;",
+          "&lt;script&gt; 和 &lt;/script&gt;",
+          "&lt;asp&gt; 和 &lt;/asp&gt;"
+        ],
+        correctIndex: 0,
+        correctResponse: "回答正确。",
+        incorrectResponse: "回答错误，正确答案是 &lt;% 和 %&gt;。"
+      },
+      {
+        q: "ASP 中用于输出内容到页面的对象是？",
+        options: [
+          "Response",
+          "Request",
+          "Server",
+          "Session"
+        ],
+        correctIndex: 0,
+        correctResponse: "回答正确。",
+        incorrectResponse: "回答错误，正确答案是 Response。"
+      },
+      {
+        q: "ASP 中用于接收表单提交数据的对象是？",
+        options: [
+          "Request",
+          "Response",
+          "Server",
+          "Application"
+        ],
+        correctIndex: 0,
+        correctResponse: "回答正确。",
+        incorrectResponse: "回答错误，正确答案是 Request。"
+      },
+      {
+        q: "ASP 中用于管理用户会话的对象是？",
+        options: [
+          "Session",
+          "Application",
+          "Request",
+          "Response"
+        ],
+        correctIndex: 0,
+        correctResponse: "回答正确。",
+        incorrectResponse: "回答错误，正确答案是 Session。"
+      },
+      {
+        q: "ASP 中用于存储全局应用程序变量的对象是？",
+        options: [
+          "Application",
+          "Session",
+          "Request",
+          "Response"
+        ],
+        correctIndex: 0,
+        correctResponse: "回答正确。",
+        incorrectResponse: "回答错误，正确答案是 Application。"
+      },
+      {
+        q: "ASP 中用于连接数据库的对象是？",
+        options: [
+          "Connection",
+          "Recordset",
+          "Command",
+          "Database"
+        ],
+        correctIndex: 0,
+        correctResponse: "回答正确。",
+        incorrectResponse: "回答错误，正确答案是 Connection。"
+      },
+      {
+        q: "ASP 中用于执行 SQL 查询并返回结果集的对象是？",
+        options: [
+          "Recordset",
+          "Connection",
+          "Command",
+          "Query"
+        ],
+        correctIndex: 0,
+        correctResponse: "回答正确。",
+        incorrectResponse: "回答错误，正确答案是 Recordset。"
+      }
+    ]
+  };
+
+  // 启动测验
+  $(document).ready(function () {
+      $('#quiz-container').runoobQuiz({
+          data: quizData,
+          onFinish: function (score, total) {
+              console.log("测验完成！得分：" + score + "/" + total);
+          }
+      });
+  });
+</script>	
+						
+			</div>
+			
+		</div>
