@@ -1,0 +1,29 @@
+
+<html>
+  <head>
+ <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.js"></script>
+ <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <script type="text/javascript">
+        $(document).ready(function() {
+            var str = "https://gdfriend.github.io/a3/test.json";
+            url =str;
+  
+            $.ajaxSetup({
+                async: false
+            }); 
+ 
+            $.getJSON(url, {}, function (data) { //讀取json資料,把資料放進data裡
+                $("#status").text(data.status);
+                $("#meta").text(data.meta.count);
+                $("#game_version").text(data.data.game_version);
+            });
+        });
+
+    </script>
+      <body>
+          <div id="status"></div>
+          <div id="meta"></div>
+          <div id="game_version"></div>
+      </body>
+  </head>
+</html>
