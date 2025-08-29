@@ -1,0 +1,12 @@
+      {
+        "q": "ASP 的全称是什么？",
+        "options": [
+          "Active Server Pages",
+          "Advanced Server Pages",
+          "Application Service Provider",
+          "Active Service Pages"
+        ],
+        "correctIndex": 0,
+        "correctResponse": "回答正确。",
+        "incorrectResponse": "回答错误，正确答案是 Active Server Pages。"
+      }

@@ -37,133 +37,129 @@
     </div>
 </div>
 <script>
-  // ASP 基础测验 20 题
-  const quizData = {
-    title: "ASP 基础测验",
-    description: "测试你对 ASP 基础知识的了解",
-    questions: [
-      {
-        q: "ASP 的全称是什么？",
-        options: [
+	var json = '[{
+        "q": "ASP 的全称是什么？",
+        "options": [
           "Active Server Pages",
           "Advanced Server Pages",
           "Application Service Provider",
           "Active Service Pages"
         ],
-        correctIndex: 0,
-        correctResponse: "回答正确。",
-        incorrectResponse: "回答错误，正确答案是 Active Server Pages。"
+        "correctIndex": 0,
+        "correctResponse": "回答正确。",
+        "incorrectResponse": "回答错误，正确答案是 Active Server Pages。"
       },
       {
-        q: "ASP 文件的默认扩展名是？",
-        options: [
+        "q": "ASP 文件的默认扩展名是？",
+        "options": [
           ".asp",
           ".aspx",
           ".php",
           ".html"
         ],
-        correctIndex: 0,
-        correctResponse: "回答正确。",
-        incorrectResponse: "回答错误，正确答案是 .asp。"
+        "correctIndex": 0,
+        "correctResponse": "回答正确。",
+        "incorrectResponse": "回答错误，正确答案是 .asp。"
       },
       {
-        q: "ASP 主要运行在哪种服务器上？",
-        options: [
+        "q": "ASP 主要运行在哪种服务器上？",
+        "options": [
           "IIS",
           "Apache",
           "Nginx",
           "Tomcat"
         ],
-        correctIndex: 0,
-        correctResponse: "回答正确。",
-        incorrectResponse: "回答错误，ASP 主要运行在 IIS 上。"
+        "correctIndex": 0,
+        "correctResponse": "回答正确。",
+        "incorrectResponse": "回答错误，ASP 主要运行在 IIS 上。"
       },
       {
-        q: "ASP 代码块的起始和结束标记是？",
-        options: [
+        "q": "ASP 代码块的起始和结束标记是？",
+        "options": [
           "&lt;% 和 %&gt;",
           "&lt;?php 和 ?&gt;",
           "&lt;script&gt; 和 &lt;/script&gt;",
           "&lt;asp&gt; 和 &lt;/asp&gt;"
         ],
-        correctIndex: 0,
-        correctResponse: "回答正确。",
-        incorrectResponse: "回答错误，正确答案是 &lt;% 和 %&gt;。"
+        "correctIndex": 0,
+        "correctResponse": "回答正确。",
+        "incorrectResponse": "回答错误，正确答案是 &lt;% 和 %&gt;。"
       },
       {
-        q: "ASP 中用于输出内容到页面的对象是？",
-        options: [
+        "q": "ASP 中用于输出内容到页面的对象是？",
+        "options": [
           "Response",
           "Request",
           "Server",
           "Session"
         ],
-        correctIndex: 0,
-        correctResponse: "回答正确。",
-        incorrectResponse: "回答错误，正确答案是 Response。"
+        "correctIndex": 0,
+        "correctResponse": "回答正确。",
+        "incorrectResponse": "回答错误，正确答案是 Response。"
       },
       {
-        q: "ASP 中用于接收表单提交数据的对象是？",
-        options: [
+        "q": "ASP 中用于接收表单提交数据的对象是？",
+        "options": [
           "Request",
           "Response",
           "Server",
           "Application"
         ],
-        correctIndex: 0,
-        correctResponse: "回答正确。",
-        incorrectResponse: "回答错误，正确答案是 Request。"
+        "correctIndex": 0,
+        "correctResponse": "回答正确。",
+        "incorrectResponse": "回答错误，正确答案是 Request。"
       },
       {
-        q: "ASP 中用于管理用户会话的对象是？",
-        options: [
+        "q": "ASP 中用于管理用户会话的对象是？",
+        "options": [
           "Session",
           "Application",
           "Request",
           "Response"
         ],
-        correctIndex: 0,
-        correctResponse: "回答正确。",
-        incorrectResponse: "回答错误，正确答案是 Session。"
+        "correctIndex": 0,
+        "correctResponse": "回答正确。",
+        "incorrectResponse": "回答错误，正确答案是 Session。"
       },
       {
-        q: "ASP 中用于存储全局应用程序变量的对象是？",
-        options: [
+        "q": "ASP 中用于存储全局应用程序变量的对象是？",
+        "options": [
           "Application",
           "Session",
           "Request",
           "Response"
         ],
-        correctIndex: 0,
-        correctResponse: "回答正确。",
-        incorrectResponse: "回答错误，正确答案是 Application。"
+        "correctIndex": 0,
+        "correctResponse": "回答正确。",
+        "incorrectResponse": "回答错误，正确答案是 Application。"
       },
       {
-        q: "ASP 中用于连接数据库的对象是？",
-        options: [
+        "q": "ASP 中用于连接数据库的对象是？",
+        "options": [
           "Connection",
           "Recordset",
           "Command",
           "Database"
         ],
-        correctIndex: 0,
-        correctResponse: "回答正确。",
-        incorrectResponse: "回答错误，正确答案是 Connection。"
+        "correctIndex": 0,
+        "correctResponse": "回答正确。",
+        "incorrectResponse": "回答错误，正确答案是 Connection。"
       },
       {
-        q: "ASP 中用于执行 SQL 查询并返回结果集的对象是？",
-        options: [
+        "q": "ASP 中用于执行 SQL 查询并返回结果集的对象是？",
+        "options": [
           "Recordset",
           "Connection",
           "Command",
           "Query"
         ],
-        correctIndex: 0,
-        correctResponse: "回答正确。",
-        incorrectResponse: "回答错误，正确答案是 Recordset。"
-      }
-    ]
-  };
+        "correctIndex": 0,
+        "correctResponse": "回答正确。",
+        "incorrectResponse": "回答错误，正确答案是 Recordset。"
+      }]';
+	var obj = JSON.parse(json);
+  // ASP 基础测验 20 题
+  const quizData = JSON.parse(json);
 
   // 启动测验
   $(document).ready(function () {

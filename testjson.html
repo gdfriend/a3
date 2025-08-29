@@ -3,27 +3,46 @@
   <head>
  <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.js"></script>
  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <script type="text/javascript">
-        $(document).ready(function() {
-            var str = "https://gdfriend.github.io/a3/test.json";
-            url =str;
-  
-            $.ajaxSetup({
-                async: false
-            }); 
- 
-            $.getJSON(url, {}, function (data) { //讀取json資料,把資料放進data裡
-                $("#status").text(data.status);
-                $("#meta").text(data.meta.count);
-                $("#game_version").text(data.data.game_version);
-            });
+<script>
+    $(document).ready(function () {
+        var dataurl = "https://gdfriend.github.io/a2/ODwsvTravelFood.json";
+        $.ajax({
+            url: dataurl,
+            type: 'GET',
+            success: function (data) {
+                alert("農村地方美食小吃特色料理共" + data.length + "筆記錄");
+                for (var i = 0; i < data.length; i++) {
+                    $("#tableshow").append
+                        (
+                            "<tr>" +
+                            "<td>" + data[i].ID + "</td>" +
+                            "<td>" + data[i].Name + "</td>" +
+                            "<td>" + data[i].Address + "</td>" +
+                            "<td>" + data[i].Tel + "</td>" +
+                            "<td>" + data[i].HostWords + "</td>" +
+                            "<td><img src='" + data[i].PicURL +
+                            "' style='width:200px;'></td>" +
+                            "<td><a href='https://www.google.com.tw/maps/place/" + data[i].Address +
+                            " 'target='_blank' class='btn btn-info'>地圖 </td>" +
+                            "</tr>"
+                        );
+                }
+            }
         });
-
-    </script>
+    });
+</script>
       <body>
-          <div id="status"></div>
-          <div id="meta"></div>
-          <div id="game_version"></div>
+<table class="table" id="tableshow">
+    <tr>
+        <th>ID</th>
+        <th>名稱</th>
+        <th>地址</th>
+        <th>電話</th>
+        <th>說明</th>
+        <th>照片</th>
+        <th></th>
+    </tr>
+</table>	  
       </body>
   </head>
 </html>
